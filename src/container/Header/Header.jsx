@@ -4,18 +4,7 @@ import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 
 import './Header.scss';
-import { Navbar } from '../../components';
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
-  },
-};
 
 const Header = () => (
   <>
@@ -37,7 +26,7 @@ const Header = () => (
             
             className="header-text">
               
-              Hello,I am <span >Syeda Maham Fahim</span> <br/>I am a <span >full stack developer</span> </h1>
+              Hello,I am <span >Syeda Maham Fahim</span> <br/>I am a <span >Fullstack Developer</span> and <span >Telecommunication Engineer</span>  </h1>
           </div>
         </div>
       </div>
