@@ -25,11 +25,10 @@ const Skills = () => {
 
   return (
     <>
-    {/* When love and skill work together, expect a masterpiece */}
-      {/* <h2 className="head-text-black">Skills</h2> */}
+   
       <h2 className="head-text-black">
       
-      When Love And <span>SkillS </span>Work Together , Expect A  <span>Masterpiece</span></h2>
+      When Love And <span>Skills </span>Work Together , Expect A  <span>Masterpiece</span></h2>
       <h2 className="head-text-white">   </h2> <br/>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">

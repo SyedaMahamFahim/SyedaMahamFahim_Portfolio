@@ -21,7 +21,7 @@ const About = () => {
     {/* “We don't just sell websites,  SELL.”
  */}
       <Navbar />
-      <h2 className="head-text-black">We don't sell <span>Websites</span> <br />we create websites that  <span> Sell</span></h2>
+      <h2 className="head-text-black">I don't sell <span>Websites</span> <br />I create websites that  <span> Sell</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
