@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <h1 className="app__navbar-logo-title" style={{ color: "crimson" }}>
-          SMF
+          SYEDA
         </h1>
       </div>
       <ul className="app__navbar-links">
