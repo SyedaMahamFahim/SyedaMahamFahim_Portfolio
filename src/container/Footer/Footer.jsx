@@ -6,6 +6,7 @@ import { client } from '../../client';
 import './Footer.scss';
 
 const Footer = () => {
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -18,21 +19,29 @@ const Footer = () => {
   };
 
   const handleSubmit = () => {
-    setLoading(true);
+  
+    if(formData.username === "" || formData.email ==="" || formData.message ===""){
+      alert("Kindly,fill the required fields.")
+    }
+    else{
+      setLoading(true);
+    
 
-    const contact = {
-      _type: 'contact',
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
+      const contact = {
+        _type: 'contact',
+        name: formData.username,
+        email: formData.email,
+        message: formData.message,
+      };
+  
+      client.create(contact)
+        .then(() => {
+          setLoading(false);
+          setIsFormSubmitted(true);
+        })
+        .catch((err) => console.log(err));
+    }
+   
   };
 
   return (
@@ -46,7 +55,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+92 316 2538566</a>
+          <a href="tel:+1 (123) 456-7890" className="p-text">+92 331 2852257</a>
         </div>
       </div>
       {!isFormSubmitted ? (
@@ -55,7 +64,9 @@ const Footer = () => {
             <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input 
+            required={true}
+            className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
           </div>
           <div>
             <textarea

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import './Navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({classNames}) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -57,3 +57,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

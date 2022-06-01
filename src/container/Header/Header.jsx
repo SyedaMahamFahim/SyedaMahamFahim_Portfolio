@@ -35,4 +35,4 @@ const Header = () => (
   </>
 );
 
-export default AppWrap(Header, 'home','new',true);
+export default AppWrap(Header, 'home','new','app__navbar_whitebg');
