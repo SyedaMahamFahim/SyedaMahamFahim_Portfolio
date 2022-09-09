@@ -16,7 +16,9 @@
     flex-direction: column;
   }
 }
-
+.app__skills_categories{
+  display: flex;
+}
 .app__skills-list {
   flex: 1 1;
   display: flex;

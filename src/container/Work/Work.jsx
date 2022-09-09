@@ -9,7 +9,7 @@ import './Work.scss';
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('React JS');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
@@ -17,8 +17,10 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data);
+      setFilterWork(data.filter((work) => work.tags.includes("React JS")));
     });
+
+
   }, []);
 
   const handleWorkFilter = (item) => {
@@ -28,11 +30,11 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
-        setFilterWork(works);
-      } else {
+      // if (item === 'React JS') {
+      //   setFilterWork(works.filter((work) => work.tags.includes("React JS")));
+      // } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
+      // }
     }, 500);
   };
 
@@ -43,7 +45,7 @@ const Work = () => {
         Portfolio are <span>Everything</span> Promises Are  <span>Nothing</span></h2>
 
       <div className="app__work-filter">
-        {['React JS', 'Vue JS','Fullstack', 'eCommerce','Django', 'Chatbox', 'WordPress','All'].map((item, index) => (
+        {['React JS', 'Vue JS','Fullstack', 'eCommerce','Django', 'Chatbot', 'WordPress'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
