@@ -45,7 +45,7 @@ const Work = () => {
         Portfolio are <span>Everything</span> Promises Are  <span>Nothing</span></h2>
 
       <div className="app__work-filter">
-        {['React JS', 'Vue JS','Fullstack', 'eCommerce','Django', 'Chatbot', 'WordPress'].map((item, index) => (
+        {['React JS', 'Vue JS','Fullstack', 'eCommerce','Django', 'Chatbot', 'WordPress','Web3.0'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
