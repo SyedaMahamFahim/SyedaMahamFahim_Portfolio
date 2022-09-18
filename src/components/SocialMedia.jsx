@@ -5,6 +5,7 @@ import { AiOutlineMedium } from 'react-icons/ai';
 const SocialMedia = () => (
   <div className="app__social">
     <div>
+      
       <a href="https://www.linkedin.com/in/syedamahamfahim/" target="_blank" rel="noreferrer noopener"><BsLinkedin /></a>
       
     </div>
